@@ -5,8 +5,8 @@
  * Plugin URI:  https://lahijweb.com
  * Version:     1.0
  * Author:      Ali Fallah
- * Text Domain: books-info
- * Domain Path: /languages
+ * Text Domain: books
+ * Domain Path: /languages/
  */
 
 add_action('plugins_loaded', array(Books_Info::get_instance(), 'plugin_setup'));
@@ -14,8 +14,10 @@ add_action('plugins_loaded', array(Books_Info::get_instance(), 'plugin_setup'));
 class Books_Info
 {
     protected static $instance = NULL;
+	const DOMAIN = 'books';
     public $plugin_url = '';
     public $plugin_path = '';
+    public $languages_path = '';
 
     public static function get_instance()
     {
@@ -27,7 +29,8 @@ class Books_Info
     {
         $this->plugin_url = plugins_url('/', __FILE__);
         $this->plugin_path = plugin_dir_path(__FILE__);
-        $this->load_language('books-info');
+        $this->languages_path = basename($this->plugin_path).'/languages';
+        $this->load_language(Books_Info::DOMAIN);
         spl_autoload_register(array($this, 'autoload'));
         add_action('init', array($this, 'init'));
     }
@@ -39,7 +42,7 @@ class Books_Info
 
     public function load_language($domain)
     {
-        load_plugin_textdomain($domain, FALSE, $this->plugin_path . '/languages');
+        load_plugin_textdomain($domain, FALSE, $this->languages_path);
     }
 
     public function autoload($class)

@@ -2,7 +2,7 @@
 
 namespace Classes;
 
-use Helper;
+use Helper, Books_Info;
 
 class Books
 {
@@ -17,20 +17,20 @@ class Books
 	public static function register_post_type()
 	{
 		Helper\Core::register_post_type(self::$post_type, [
-			'name' => __('Books', 'books-info'),
-			'singular_name' => __('Book', 'books-info'),
-			'menu_name' => __('Book', 'books-info'),
-			'all_items' => __('All Books', 'books-info'),
-			'add_new' => __('Add New', 'books-info'),
-			'add_new_item' => __('Add New Book', 'books-info'),
-			'edit_item' => __('Edit Book', 'books-info'),
-			'new_item' => __('New Book', 'books-info'),
-			'view_item' => __('View Book', 'books-info'),
-			'view_items' => __('View Books', 'books-info'),
-			'search_items' => __('Search Books', 'books-info'),
-			'not_found' => __('Nothing found', 'books-info'),
-			'not_found_in_trash' => __('Nothing found in Trash', 'books-info'),
-			'items_list' => __('Books List', 'books-info'),
+			'name' => __('Books', Books_Info::DOMAIN),
+			'singular_name' => __('Book', Books_Info::DOMAIN),
+			'menu_name' => __('Book', Books_Info::DOMAIN),
+			'all_items' => __('All Books', Books_Info::DOMAIN),
+			'add_new' => __('Add New', Books_Info::DOMAIN),
+			'add_new_item' => __('Add New Book', Books_Info::DOMAIN),
+			'edit_item' => __('Edit Book', Books_Info::DOMAIN),
+			'new_item' => __('New Book', Books_Info::DOMAIN),
+			'view_item' => __('View Book', Books_Info::DOMAIN),
+			'view_items' => __('View Books', Books_Info::DOMAIN),
+			'search_items' => __('Search Books', Books_Info::DOMAIN),
+			'not_found' => __('Nothing found', Books_Info::DOMAIN),
+			'not_found_in_trash' => __('Nothing found in Trash', Books_Info::DOMAIN),
+			'items_list' => __('Books List', Books_Info::DOMAIN),
 		]);
 	}
 
@@ -38,26 +38,26 @@ class Books
 	{
 		// authors taxonomy
 		Helper\Core::register_taxonomy('authors', self::$post_type, [
-			'name' => __('Authors', 'books-info'),
-			'singular_name' => __('Author', 'books-info'),
-			'menu_name' => __('Authors', 'books-info'),
-			'all_items' => __('All Authors', 'books-info'),
-			'edit_item' => __('Edit Author', 'books-info'),
-			'view_item' => __('View Author', 'books-info'),
-			'add_new_item' => __('Add New Author', 'books-info'),
-			'search_items' => __('Search Authors', 'books-info'),
+			'name' => __('Authors', Books_Info::DOMAIN),
+			'singular_name' => __('Author', Books_Info::DOMAIN),
+			'menu_name' => __('Authors', Books_Info::DOMAIN),
+			'all_items' => __('All Authors', Books_Info::DOMAIN),
+			'edit_item' => __('Edit Author', Books_Info::DOMAIN),
+			'view_item' => __('View Author', Books_Info::DOMAIN),
+			'add_new_item' => __('Add New Author', Books_Info::DOMAIN),
+			'search_items' => __('Search Authors', Books_Info::DOMAIN),
 		]);
 
 		// publishers taxonomy
 		Helper\Core::register_taxonomy('publishers', self::$post_type, [
-			'name' => __('Publishers', 'books-info'),
-			'singular_name' => __('Publisher', 'books-info'),
-			'menu_name' => __('Publishers', 'books-info'),
-			'all_items' => __('All Publishers', 'books-info'),
-			'edit_item' => __('Edit Publisher', 'books-info'),
-			'view_item' => __('View Publisher', 'books-info'),
-			'add_new_item' => __('Add New Publisher', 'books-info'),
-			'search_items' => __('Search Publishers', 'books-info'),
+			'name' => __('Publishers', Books_Info::DOMAIN),
+			'singular_name' => __('Publisher', Books_Info::DOMAIN),
+			'menu_name' => __('Publishers', Books_Info::DOMAIN),
+			'all_items' => __('All Publishers', Books_Info::DOMAIN),
+			'edit_item' => __('Edit Publisher', Books_Info::DOMAIN),
+			'view_item' => __('View Publisher', Books_Info::DOMAIN),
+			'add_new_item' => __('Add New Publisher', Books_Info::DOMAIN),
+			'search_items' => __('Search Publishers', Books_Info::DOMAIN),
 		]);
 	}
 }

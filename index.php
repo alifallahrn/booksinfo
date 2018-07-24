@@ -10,6 +10,7 @@
  */
 
 add_action('plugins_loaded', array(Books_Info::get_instance(), 'plugin_setup'));
+register_activation_hook(__FILE__, array(Books_Info::get_instance(), 'activation_hook'));
 
 class Books_Info
 {
@@ -33,6 +34,21 @@ class Books_Info
         $this->load_language(Books_Info::DOMAIN);
         spl_autoload_register(array($this, 'autoload'));
         add_action('init', array($this, 'init'));
+    }
+
+    public function activation_hook()
+    {
+	    global $wpdb;
+	    $charset_collate = $wpdb->get_charset_collate();
+	    $table_name = $wpdb->prefix.'books_info';
+	    $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+			id int(11) NOT NULL AUTO_INCREMENT,
+			post_id int(11) NOT NULL,
+			isbn varchar(255) DEFAULT '' NOT NULL,
+			PRIMARY KEY  (id)
+		) $charset_collate;";
+	    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	    dbDelta($sql);
     }
 
 	public function init()

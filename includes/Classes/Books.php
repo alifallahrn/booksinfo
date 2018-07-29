@@ -66,6 +66,7 @@ class Books
 	{
 		add_action('add_meta_boxes_'.self::$post_type, array(__CLASS__, 'add_meta_boxes'));
 		add_action('save_post_'.self::$post_type, array(__CLASS__, 'save_post'));
+		add_action('delete_post', array(__CLASS__, 'delete_post'));
 		add_filter('set-screen-option', array(__CLASS__, 'set_screen_option'), 10, 3);
 		add_action('admin_menu', array(__CLASS__, 'admin_menu'));
 	}
@@ -91,6 +92,16 @@ class Books
 		if ( ! isset( $_POST['_isbn'] ) ) return;
 		$isbn = sanitize_text_field( $_POST['_isbn'] );
 		self::save_isbn_to_db($post_id, $isbn);
+	}
+
+	public static function delete_post($post_id)
+	{
+		global $wpdb;
+		$table = $wpdb->prefix.Books_Info::TABLE_NAME;
+		$check_isbn = self::get_isbn_from_db($post_id);
+		if($check_isbn) {
+			$wpdb->delete($table, array('post_id' => $post_id));
+		}
 	}
 
 	public static function save_isbn_to_db($post_id, $isbn)

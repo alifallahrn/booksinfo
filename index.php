@@ -29,6 +29,7 @@ class Books_Info
 
     public function plugin_setup()
     {
+	    ob_start();
         $this->plugin_url = plugins_url('/', __FILE__);
         $this->plugin_path = plugin_dir_path(__FILE__);
         $this->languages_path = basename($this->plugin_path).'/languages';

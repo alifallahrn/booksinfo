@@ -66,6 +66,8 @@ class Books
 	{
 		add_action('add_meta_boxes_'.self::$post_type, array(__CLASS__, 'add_meta_boxes'));
 		add_action('save_post_'.self::$post_type, array(__CLASS__, 'save_post'));
+		add_filter('set-screen-option', array(__CLASS__, 'set_screen_option'), 10, 3);
+		add_action('admin_menu', array(__CLASS__, 'admin_menu'));
 	}
 
 	public static function add_meta_boxes()
@@ -109,5 +111,50 @@ class Books
 		$table = $wpdb->prefix.Books_Info::TABLE_NAME;
 		$isbn = $wpdb->get_var('SELECT isbn FROM '.$table.' WHERE post_id="'.$post_id.'"');
 		return $isbn;
+	}
+
+	public static function admin_menu()
+	{
+		$menu_id = add_submenu_page('edit.php?post_type='.self::$post_type, __('View ISBNs', Books_Info::DOMAIN), __('View ISBNs', Books_Info::DOMAIN), 'manage_options', 'books_isbn', array(__CLASS__, 'books_isbn_page'));
+		add_action('load-'.$menu_id, array(__CLASS__, 'screen_option'));
+	}
+
+	public function books_isbn_page()
+	{
+		?>
+		<div class="wrap">
+			<h2><?= __('List ISBNs', Books_Info::DOMAIN) ?></h2>
+			<div id="poststuff">
+				<div id="post-body" class="metabox-holder columns-1">
+					<div id="post-body-content">
+						<div class="meta-box-sortables ui-sortable">
+							<form method="post">
+								<?php $ISBN = new Helper\ISBN(); ?>
+								<?php $ISBN->prepare_items(); ?>
+								<?php $ISBN->display() ?>
+							</form>
+						</div>
+					</div>
+				</div>
+				<br class="clear">
+			</div>
+		</div>
+		<?php
+	}
+
+	public static function set_screen_option($status, $option, $value)
+	{
+		return $value;
+	}
+
+	public function screen_option()
+	{
+		$option = 'per_page';
+		$args   = [
+			'label'   => 'ISBN',
+			'default' => 5,
+			'option'  => 'isbn_per_page'
+		];
+		add_screen_option( $option, $args );
 	}
 }

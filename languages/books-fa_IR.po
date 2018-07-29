@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Books Info\n"
-"POT-Creation-Date: 2018-07-29 16:22+0430\n"
-"PO-Revision-Date: 2018-07-29 16:22+0430\n"
+"POT-Creation-Date: 2018-07-29 21:59+0430\n"
+"PO-Revision-Date: 2018-07-29 22:01+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -25,6 +25,7 @@ msgid "Books"
 msgstr "کتاب ها"
 
 #: includes/Classes/Books.php:22 includes/Classes/Books.php:23
+#: includes/Helper/ISBN.php:62
 msgid "Book"
 msgstr "کتاب"
 
@@ -60,7 +61,7 @@ msgstr "مشاهده کتاب ها"
 msgid "Search Books"
 msgstr "جستجوی کتاب ها"
 
-#: includes/Classes/Books.php:32
+#: includes/Classes/Books.php:32 includes/Helper/ISBN.php:54
 msgid "Nothing found"
 msgstr "اطلاعاتی جهت نمایش یافت نشد"
 
@@ -128,13 +129,37 @@ msgstr "افزودن ناشر جدید"
 msgid "Search Publishers"
 msgstr "جستجوی ناشران"
 
-#: includes/Classes/Books.php:73
+#: includes/Classes/Books.php:75
 msgid "Isbn"
 msgstr "شماره شابک"
 
-#: includes/Classes/Books.php:80
+#: includes/Classes/Books.php:82
 msgid "Enter Book ISBN Here"
 msgstr "شماره شابک را اینجا وارد نمایید"
+
+#: includes/Classes/Books.php:118
+msgid "View ISBNs"
+msgstr "همه  شابک ها"
+
+#: includes/Classes/Books.php:126
+msgid "List ISBNs"
+msgstr "شابک ها"
+
+#: includes/Helper/ISBN.php:18 includes/Helper/ISBN.php:61
+msgid "ISBN"
+msgstr "شابک"
+
+#: includes/Helper/ISBN.php:19
+msgid "ISBNs"
+msgstr "شابک ها"
+
+#: includes/Helper/ISBN.php:75 includes/Helper/ISBN.php:92
+msgid "Delete"
+msgstr "حذف"
+
+#: includes/Helper/ISBN.php:119
+msgid "Sorry, you are not allowed to access this page"
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Books Info"

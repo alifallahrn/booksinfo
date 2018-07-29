@@ -1,130 +1,140 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: Books Info\n"
-"POT-Creation-Date: 2018-07-24 23:14+0430\n"
-"PO-Revision-Date: 2018-07-24 23:18+0430\n"
+"POT-Creation-Date: 2018-07-29 16:22+0430\n"
+"PO-Revision-Date: 2018-07-29 16:22+0430\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: index.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: fa_IR\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/Classes/Books.php:20
+#: includes/Classes/Books.php:21
 msgid "Books"
 msgstr "کتاب ها"
 
-#: includes/Classes/Books.php:21 includes/Classes/Books.php:22
+#: includes/Classes/Books.php:22 includes/Classes/Books.php:23
 msgid "Book"
 msgstr "کتاب"
 
-#: includes/Classes/Books.php:23
+#: includes/Classes/Books.php:24
 msgid "All Books"
 msgstr "همه کتاب ها"
 
-#: includes/Classes/Books.php:24
+#: includes/Classes/Books.php:25
 msgid "Add New"
 msgstr "افزودن جدید"
 
-#: includes/Classes/Books.php:25
+#: includes/Classes/Books.php:26
 msgid "Add New Book"
 msgstr "افزودن کتاب جدید"
 
-#: includes/Classes/Books.php:26
+#: includes/Classes/Books.php:27
 msgid "Edit Book"
 msgstr "ویرایش کتاب"
 
-#: includes/Classes/Books.php:27
+#: includes/Classes/Books.php:28
 msgid "New Book"
 msgstr "کتاب جدید"
 
-#: includes/Classes/Books.php:28
+#: includes/Classes/Books.php:29
 msgid "View Book"
 msgstr "مشاهده کتاب"
 
-#: includes/Classes/Books.php:29
+#: includes/Classes/Books.php:30
 msgid "View Books"
 msgstr "مشاهده کتاب ها"
 
-#: includes/Classes/Books.php:30
+#: includes/Classes/Books.php:31
 msgid "Search Books"
 msgstr "جستجوی کتاب ها"
 
-#: includes/Classes/Books.php:31
+#: includes/Classes/Books.php:32
 msgid "Nothing found"
 msgstr "اطلاعاتی جهت نمایش یافت نشد"
 
-#: includes/Classes/Books.php:32
+#: includes/Classes/Books.php:33
 msgid "Nothing found in Trash"
 msgstr "اطلاعاتی در زباله دان یافت نشد"
 
-#: includes/Classes/Books.php:33
+#: includes/Classes/Books.php:34
 msgid "Books List"
 msgstr "لیست کتاب ها"
 
-#: includes/Classes/Books.php:41 includes/Classes/Books.php:43
+#: includes/Classes/Books.php:42 includes/Classes/Books.php:44
 msgid "Authors"
 msgstr "نویسندگان"
 
-#: includes/Classes/Books.php:42
+#: includes/Classes/Books.php:43
 msgid "Author"
 msgstr "نویسنده"
 
-#: includes/Classes/Books.php:44
+#: includes/Classes/Books.php:45
 msgid "All Authors"
 msgstr "همه نویسندگان"
 
-#: includes/Classes/Books.php:45
+#: includes/Classes/Books.php:46
 msgid "Edit Author"
 msgstr "ویرایش نویسنده"
 
-#: includes/Classes/Books.php:46
+#: includes/Classes/Books.php:47
 msgid "View Author"
 msgstr "مشاهده نویسنده"
 
-#: includes/Classes/Books.php:47
+#: includes/Classes/Books.php:48
 msgid "Add New Author"
 msgstr "افزودن نویسنده جدید"
 
-#: includes/Classes/Books.php:48
+#: includes/Classes/Books.php:49
 msgid "Search Authors"
 msgstr "جستجوی نویسندگان"
 
-#: includes/Classes/Books.php:53 includes/Classes/Books.php:55
+#: includes/Classes/Books.php:54 includes/Classes/Books.php:56
 msgid "Publishers"
 msgstr "ناشران"
 
-#: includes/Classes/Books.php:54
+#: includes/Classes/Books.php:55
 msgid "Publisher"
 msgstr "ناشر"
 
-#: includes/Classes/Books.php:56
+#: includes/Classes/Books.php:57
 msgid "All Publishers"
 msgstr "همه ناشران"
 
-#: includes/Classes/Books.php:57
+#: includes/Classes/Books.php:58
 msgid "Edit Publisher"
 msgstr "ویرایش ناشر"
 
-#: includes/Classes/Books.php:58
+#: includes/Classes/Books.php:59
 msgid "View Publisher"
 msgstr "مشاهده ناشر"
 
-#: includes/Classes/Books.php:59
+#: includes/Classes/Books.php:60
 msgid "Add New Publisher"
 msgstr "افزودن ناشر جدید"
 
-#: includes/Classes/Books.php:60
+#: includes/Classes/Books.php:61
 msgid "Search Publishers"
 msgstr "جستجوی ناشران"
+
+#: includes/Classes/Books.php:73
+msgid "Isbn"
+msgstr "شماره شابک"
+
+#: includes/Classes/Books.php:80
+msgid "Enter Book ISBN Here"
+msgstr "شماره شابک را اینجا وارد نمایید"
 
 #. Plugin Name of the plugin/theme
 msgid "Books Info"

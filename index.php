@@ -16,6 +16,7 @@ class Books_Info
 {
     protected static $instance = NULL;
 	const DOMAIN = 'books';
+	const TABLE_NAME = 'books_info';
     public $plugin_url = '';
     public $plugin_path = '';
     public $languages_path = '';
@@ -40,7 +41,7 @@ class Books_Info
     {
 	    global $wpdb;
 	    $charset_collate = $wpdb->get_charset_collate();
-	    $table_name = $wpdb->prefix.'books_info';
+	    $table_name = $wpdb->prefix.Books_Info::TABLE_NAME;
 	    $sql = "CREATE TABLE IF NOT EXISTS $table_name (
 			id int(11) NOT NULL AUTO_INCREMENT,
 			post_id int(11) NOT NULL,
